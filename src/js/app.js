@@ -2,9 +2,7 @@ import firebaseConfig from "./firebaseConfig";
 import {initializeApp} from 'firebase/app'
 import {getFirestore, collection, deleteDoc, doc, onSnapshot} from 'firebase/firestore'
 initializeApp(firebaseConfig)
-
 const database = getFirestore()
-
 const wineCollection = collection(database, 'wineCollection')
 
 onSnapshot(wineCollection, (snapshot)=>{
