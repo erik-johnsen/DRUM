@@ -5,6 +5,7 @@ initializeApp(firebaseConfig)
 const database = getFirestore()
 const wineCollection = collection(database, 'wineCollection')
 
+// GET DATA FROM DATABASE
 onSnapshot(wineCollection, (snapshot)=>{
 	const wineArray = []
 	snapshot.docs.forEach(item => {
@@ -12,3 +13,5 @@ onSnapshot(wineCollection, (snapshot)=>{
 		console.log(wineArray);
 	})
 })
+
+

@@ -1,0 +1,41 @@
+/* window */
+
+.window-container {
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--color-background);
+	display: flex;
+	justify-content: center;
+}
+
+/* Navbar */
+
+header {
+	width: 80%;
+	height: fit-content;
+	border-bottom: 1px solid black;
+	padding: 1.25rem 0;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-family: var(--font-main);
+}
+.nav-buttons {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.nav-title {
+	display: flex;
+	align-items: center;
+}
+
+.nav-new_form {
+	color: var(--color-background);
+	background-color: var(--color-redwine-primary);
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.25rem;
+}
