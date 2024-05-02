@@ -4,6 +4,12 @@
 	--font-main: "Libre Caslon Text";
 	--font-weight-regular: 400;
 
+	--font-size-title: 3.5rem;
+	--font-size-under_title: 1.625rem;
+	--font-size-nav_title: 1.375rem;
+	--font-size-medium: 1.125rem;
+	--font-size-small: 0.875rem;
+
 	--color-font: #5D0630;
 
 	--color-primary: #5D0630;
