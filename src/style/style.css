@@ -1,6 +1,7 @@
 /* window */
 
 .window-container {
+	position: relative;
 	width: 100vw;
 	height: 100vh;
 	background-color: var(--color-background);
@@ -8,7 +9,7 @@
 	justify-content: center;
 }
 
-/* Navbar */
+/* Header */
 
 header {
 	width: 80%;
@@ -38,4 +39,20 @@ nav {
 	background-color: var(--color-redwine-primary);
 	padding: 0.5rem 0.75rem;
 	border-radius: 0.25rem;
+}
+
+/* Footer */
+
+footer {
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	transform: translate(-50%);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 80%;
+	border-top: 1px solid black;
+	padding-top: 1rem;
+	font-family: var(--font-main);
 }
