@@ -12,7 +12,6 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 /* Header */
@@ -54,10 +53,7 @@ nav {
 /* Footer */
 
 footer {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translate(-50%);
+  margin: 2rem 0rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -73,7 +69,8 @@ footer {
 .pages {
   width: 100%;
   display: flex;
-  align-items: center;
+  height: fit-content;
+  margin-top: 15rem;
 }
 
 /* landing page */
@@ -81,7 +78,7 @@ footer {
 /* about page */
 
 .about-page {
-  display: flex;
+  display: none;
   width: 100%;
   height: 35rem;
 }
@@ -128,9 +125,182 @@ footer {
   font-size: var(--font-size-medium);
 }
 
+/*  add wine page*/
+
+.add_wine-page {
+  font-family: var(--font-main);
+  color: var(--color-redwine-primary);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.add_wine-titles {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	gap: 0.63rem;
+}
+
+.add_wine-title {
+	font-size: var(--font-size-title);
+}
+
+.add_wine-undertitle {
+	font-size: var(--font-size-medium);
+}
+
+.add_wine-form {
+  margin-top: 10rem;
+  width: 100%;
+}
+
+.pre-tasting-questions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  padding: 2.62rem 0 6rem 0;
+}
+
+.pre-tasting-questions_title, .pre-tasting-questions_inputs {
+  font-size: var(--font-size-under_title);
+  flex-basis: 50%;
+}
+
+.pre-tasting-questions_inputs {
+  font-size: var(--font-size-small);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.pre-tasting-questions_inputs div {
+  display: flex;
+  flex-direction: column;
+}
+
+.pre-tasting-questions_inputs div input {
+  width: 18rem;
+  height: 2rem;
+}
+
+.tasting-questions {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  padding-top: 2.62rem;
+}
+
+.tasting-questions-title, .tasting-questions_inputs {
+  font-size: var(--font-size-under_title);
+  flex-basis: 50%;
+}
+
+.tasting-questions_inputs {
+  font-size: var(--font-size-small);
+}
+
+.tasting-questions_info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2.5rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 2.5rem;
+}
+
+.form_1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_1 input {
+  height: 2rem;
+}
+
+.form_2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.form_2 input {
+  height: 2rem;
+  width: 18rem;
+}
+
+.form_2 select {
+  height: 2rem;
+  width: 18rem;
+}
+
+.form_2 div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tasting-questions_score {
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.tasting-questions_score-title {
+  font-size: var(--font-size-under_title);
+}
+
+.tasting-questions_average-score {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0.75rem;
+  justify-content: space-between;
+  color: var(--color-whitewine-primary);
+  background-color: var(--color-champagne-secondary);
+  border: 1px solid var(--color-whitewine-primary);
+  border-radius: 0.3rem;
+}
+
+.tasting-questions_average-score_title {
+  font-size: var(--font-size-medium);
+  width: 10.8rem;
+}
+
+.tasting-questions_average-score_number {
+  font-size: var(--font-size-title);
+}
+
+.tasting-questions-buttons {
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-under_title);
+  gap: 0.56rem;
+ 
+}
+
+.tasting-questions-button_add-wine, .tasting-questions-button_submit {
+  border: 1px solid var(--color-primary);
+  border-radius: 0.3rem;
+  padding: 1rem;
+}
+
+.tasting-questions-button_submit {
+  color: var(--color-background);
+  background-color: var(--color-redwine-primary);
+  border: 1px solid var(--color-primary)
+}
 
 /* LOGIC */
 
 .active {
-	display: flex;
+  display: flex;
 }

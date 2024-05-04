@@ -57,8 +57,177 @@
             </div>
           </section>
         </page>
-        <page class="add_wine-page"></page>
-        <page class="database-page"></page>
+        <page class="add_wine-page active">
+          <div class="add_wine-titles">
+            <div class="add_wine-title">Velkommen til vinsmaking!</div>
+            <div class="add_wine-undertitle">
+              En person noterer, resten synser!
+            </div>
+          </div>
+          <form class="add_wine-form">
+            <section class="pre-tasting-questions">
+              <div class="pre-tasting-questions_title">Om smakingen</div>
+              <div class="pre-tasting-questions_inputs">
+                <div>
+                  <label for="date">DATO FOR SMAKINGEN</label>
+                  <input
+                    name="date"
+                    type="date"
+                    class="pre-tasting-questions_date-input"
+                  />
+                </div>
+                <div>
+                  <label for="host">VERT</label>
+                  <input
+                    name="host"
+                    type="text"
+                    class="pre-tasting-questions_host-input"
+                    placeholder="Skriv her"
+                  />
+                </div>
+              </div>
+            </section>
+            <section class="tasting-questions">
+              <div class="tasting-questions-title">Vin nr. 01</div>
+              <div class="tasting-questions_inputs">
+                <div class="tasting-questions_info">
+                  <div class="form_1">
+                    <label for="name">NAVN PÅ VIN</label>
+                    <input type="text" name="name" placeholder="Skriv her" />
+                  </div>
+                  <div class="form_2">
+                    <div>
+                      <label for="type">TYPE</label>
+                      <select name="type">
+                        <option value="velg">Velg</option>
+                        <option value="redwine">Rødvin</option>
+                        <option value="whitewine">Hvitvin</option>
+                        <option value="champagne">Champagne</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label for="year">ÅRGANG</label>
+                      <input
+                        type="number"
+                        name="year"
+                        placeholder="----"
+                        maxlength="4"
+                      />
+                    </div>
+                  </div>
+                  <div class="form_1">
+                    <label for="producer">PRODUSENT</label>
+                    <input
+                      type="text"
+                      name="producer"
+                      placeholder="Skriv her"
+                    />
+                  </div>
+                  <div class="form_2">
+                    <div>
+                      <label for="country">LAND</label>
+                      <input
+                        type="text"
+                        name="country"
+                        placeholder="Skriv her"
+                      />
+                    </div>
+                    <div>
+                      <label for="price">PRIS</label>
+                      <input
+                        type="number"
+                        name="price"
+                        placeholder="Skriv her"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tasting-questions_score">
+                  <div class="tasting-questions_score-title">Poeng</div>
+                  <div class="tasting-questions_score">
+                    <div class="form_2">
+                      <div>
+                        <label for="MJ">MJ</label>
+                        <input
+                          type="number"
+                          name="MJ"
+                          placeholder="Skriv her"
+                        />
+                      </div>
+
+                      <div>
+                        <label for="HS">HS</label>
+                        <input
+                          type="number"
+                          name="HS"
+                          placeholder="Skriv her"
+                        />
+                      </div>
+                    </div>
+                    <div class="form_2">
+                      <div>
+                        <label for="BAL">BAL</label>
+                        <input
+                          type="number"
+                          name="BAL"
+                          placeholder="Skriv her"
+                        />
+                      </div>
+
+                      <div>
+                        <label for="LPW">LPW</label>
+                        <input
+                          type="number"
+                          name="LPW"
+                          placeholder="Skriv her"
+                        />
+                      </div>
+                    </div>
+                    <div class="form_2">
+                      <div>
+                        <label for="NIB">NIB</label>
+                        <input
+                          type="number"
+                          name="NIB"
+                          placeholder="Skriv her"
+                        />
+                      </div>
+
+                      <div>
+                        <label for="JR">JR</label>
+                        <input
+                          type="number"
+                          name="JR"
+                          placeholder="Skriv her"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tasting-questions_average-score">
+                  <div class="tasting-questions_average-score_title">
+                    Gjennomsnittlig poengsum
+                  </div>
+                  <div class="tasting-questions_average-score_number">
+                    12,4p
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="tasting-questions-buttons">
+              <button class="tasting-questions-button_add-wine">+ Legg til ny vin</button>
+              <button class="tasting-questions-button_submit">Avslutt vinsmakingen</button>
+            </section>
+          </form>
+        </page>
+        <page class="database-page">
+          <!-- <div class="database-title">Databasen</div>
+          <div class="table-container">
+            
+          </div> -->
+        </page>
       </pages>
 
       <footer>
