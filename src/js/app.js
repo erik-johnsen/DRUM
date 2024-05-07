@@ -14,4 +14,6 @@ onSnapshot(wineCollection, (snapshot)=>{
 	})
 })
 
+console.log("hei");
 
+// FIX THIS
