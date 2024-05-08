@@ -1,3 +1,5 @@
+import './switchPages'
+
 import firebaseConfig from "./firebaseConfig";
 import {initializeApp} from 'firebase/app'
 import {getFirestore, collection, deleteDoc, doc, onSnapshot} from 'firebase/firestore'
@@ -13,7 +15,3 @@ onSnapshot(wineCollection, (snapshot)=>{
 		console.log(wineArray);
 	})
 })
-
-console.log("hei");
-
-// FIX THIS

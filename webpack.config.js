@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
   mode: 'development',
-  entry: './src/js/app.js',
+  entry: ['./src/js/app.js', './src/js/switchPages.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',

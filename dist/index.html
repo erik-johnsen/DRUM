@@ -16,17 +16,17 @@
     <main class="window-container">
       <header>
         <nav>
-          <div class="nav-title">DRUM Vinsmaking</div>
+          <div class="nav-button nav-title" data-buttons="landing">DRUM Vinsmaking</div>
           <div class="nav-buttons">
-            <button class="nav-database">Databasen</button>
-            <button class="nav-about">Om oss</button>
-            <button class="nav-new_form">Ny vinsmaking</button>
+            <button class="nav-button nav-database"  data-buttons="database">Databasen</button>
+            <button class="nav-button nav-about" data-buttons="about">Om oss</button>
+            <button class="nav-button nav-new_form" data-buttons="add_wine">Ny vinsmaking</button>
           </div>
         </nav>
       </header>
 
       <pages class="pages">
-        <page class="landing-page active-flex">
+        <page class="page landing-page active-flex" data-pages="landing">
           <section class="landing-page_left">
             <img src="../src/assets/SVG/landing_page-left_side.svg" alt="Picture of wineyard">
           </section>
@@ -34,7 +34,7 @@
             <img src="../src/assets/SVG/landing_page-right_side.svg" alt="Picture of hand drawn wine glass">
           </section>
         </page>
-        <page class="about-page">
+        <page class="page about-page" data-pages="about">
           <section class="about_section-img">
             <img
               class="about-img"
@@ -64,7 +64,7 @@
             </div>
           </section>
         </page>
-        <page class="add_wine-page">
+        <page class="page add_wine-page" data-pages="add_wine">
           <div class="add_wine-titles">
             <div class="add_wine-title">Velkommen til vinsmaking!</div>
             <div class="add_wine-undertitle">
@@ -233,7 +233,7 @@
             </section>
           </form>
         </page>
-        <page class="database-page">
+        <page class="page database-page" data-pages="database">
           <div class="database-title">Databasen</div>
           <div class="table-container">
             <div class="table-header">

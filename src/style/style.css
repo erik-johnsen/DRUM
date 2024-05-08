@@ -42,6 +42,7 @@ nav {
   font-size: var(--font-size-nav_title);
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .nav-new_form {
