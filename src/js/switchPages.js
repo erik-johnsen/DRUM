@@ -5,7 +5,6 @@ const pages = document.querySelectorAll(".page")
 navButtons.forEach(navButton => {
 	function displayPages(e){
 		const clickedButton = e.currentTarget
-		console.log(clickedButton);
 		const pageToDisplay = clickedButton.dataset.buttons
 
 		pages.forEach(page => {

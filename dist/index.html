@@ -16,11 +16,19 @@
     <main class="window-container">
       <header>
         <nav>
-          <div class="nav-button nav-title" data-buttons="landing">DRUM Vinsmaking</div>
+          <div class="nav-button nav-title" data-buttons="landing">
+            DRUM Vinsmaking
+          </div>
           <div class="nav-buttons">
-            <button class="nav-button nav-database"  data-buttons="database">Databasen</button>
-            <button class="nav-button nav-about" data-buttons="about">Om oss</button>
-            <button class="nav-button nav-new_form" data-buttons="add_wine">Ny vinsmaking</button>
+            <button class="nav-button nav-database" data-buttons="database">
+              Databasen
+            </button>
+            <button class="nav-button nav-about" data-buttons="about">
+              Om oss
+            </button>
+            <button class="nav-button nav-new_form" data-buttons="add_wine">
+              Ny vinsmaking
+            </button>
           </div>
         </nav>
       </header>
@@ -28,10 +36,16 @@
       <pages class="pages">
         <page class="page landing-page active-flex" data-pages="landing">
           <section class="landing-page_left">
-            <img src="../src/assets/SVG/landing_page-left_side.svg" alt="Picture of wineyard">
+            <img
+              src="../src/assets/SVG/landing_page-left_side.svg"
+              alt="Picture of wineyard"
+            />
           </section>
           <section class="landing-page_right">
-            <img src="../src/assets/SVG/landing_page-right_side.svg" alt="Picture of hand drawn wine glass">
+            <img
+              src="../src/assets/SVG/landing_page-right_side.svg"
+              alt="Picture of hand drawn wine glass"
+            />
           </section>
         </page>
         <page class="page about-page" data-pages="about">
@@ -100,12 +114,20 @@
                 <div class="tasting-questions_info">
                   <div class="form_1">
                     <label for="name">NAVN PÅ VIN</label>
-                    <input type="text" name="name" placeholder="Skriv her" />
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Skriv her"
+                      class="tasting-questions_info-name-input"
+                    />
                   </div>
                   <div class="form_2">
                     <div>
                       <label for="type">TYPE</label>
-                      <select name="type">
+                      <select
+                        name="type"
+                        class="tasting-questions_info-type-input"
+                      >
                         <option value="velg">Velg</option>
                         <option value="redwine">Rødvin</option>
                         <option value="whitewine">Hvitvin</option>
@@ -119,6 +141,7 @@
                         name="year"
                         placeholder="----"
                         maxlength="4"
+                        class="tasting-questions_info-year-input"
                       />
                     </div>
                   </div>
@@ -128,6 +151,7 @@
                       type="text"
                       name="producer"
                       placeholder="Skriv her"
+                      class="tasting-questions_info-producer-input"
                     />
                   </div>
                   <div class="form_2">
@@ -137,6 +161,7 @@
                         type="text"
                         name="country"
                         placeholder="Skriv her"
+                        class="tasting-questions_info-country-input"
                       />
                     </div>
                     <div>
@@ -145,6 +170,7 @@
                         type="number"
                         name="price"
                         placeholder="Skriv her"
+                        class="tasting-questions_info-price-input"
                       />
                     </div>
                   </div>
@@ -160,6 +186,7 @@
                           type="number"
                           name="MJ"
                           placeholder="Skriv her"
+                          class="score-input tasting-questions_score-MJ-input"
                         />
                       </div>
 
@@ -169,6 +196,7 @@
                           type="number"
                           name="HS"
                           placeholder="Skriv her"
+                          class="score-input tasting-questions_score-HS-input"
                         />
                       </div>
                     </div>
@@ -179,6 +207,7 @@
                           type="number"
                           name="BAL"
                           placeholder="Skriv her"
+                          class="score-input tasting-questions_score-BAL-input"
                         />
                       </div>
 
@@ -188,6 +217,7 @@
                           type="number"
                           name="LPW"
                           placeholder="Skriv her"
+                          class="score-input tasting-questions_score-LPW-input"
                         />
                       </div>
                     </div>
@@ -198,6 +228,7 @@
                           type="number"
                           name="NIB"
                           placeholder="Skriv her"
+                          class="score-input tasting-questions_score-NIB-input"
                         />
                       </div>
 
@@ -207,6 +238,7 @@
                           type="number"
                           name="JR"
                           placeholder="Skriv her"
+                          class="score-input tasting-questions_score-JR-input"
                         />
                       </div>
                     </div>
@@ -218,11 +250,12 @@
                     Gjennomsnittlig poengsum
                   </div>
                   <div class="tasting-questions_average-score_number">
-                    12,4p
+                    - - -
                   </div>
                 </div>
               </div>
             </section>
+
             <section class="tasting-questions-buttons">
               <button class="tasting-questions-button_add-wine">
                 + Legg til ny vin
@@ -231,6 +264,7 @@
                 Avslutt vinsmakingen
               </button>
             </section>
+
           </form>
         </page>
         <page class="page database-page" data-pages="database">
@@ -281,14 +315,16 @@
                     <div class="table-item_accordion-info">Sør Afrika</div>
                   </div>
                   <div class="table-item_accordion-content_taste-date">
-                    <div class="table-item_accordion-undertitle">SMAKE DATO</div>
+                    <div class="table-item_accordion-undertitle">
+                      SMAKE DATO
+                    </div>
                     <div class="table-item_accordion-info">17 Mai</div>
                   </div>
                   <div class="table-item_accordion-content_HS">
                     <div class="table-item_accordion-undertitle">HS</div>
                     <div class="table-item_accordion-info">16.10</div>
                   </div>
-                  
+
                   <div class="table-item_accordion-content_LPW">
                     <div class="table-item_accordion-undertitle">LPW</div>
                     <div class="table-item_accordion-info">16.10</div>
