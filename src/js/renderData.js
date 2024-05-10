@@ -20,7 +20,9 @@ setTimeout(() => {
     const name = document.createElement('span');
     const year = document.createElement('span');
     const price = document.createElement('span');
-    const type = document.createElement('span');
+    const typeContainer = document.createElement('span');
+    const type = document.createElement('div');
+    typeContainer.append(type)
     const score = document.createElement('span');
     const caret = document.createElement('span');
 
@@ -34,13 +36,21 @@ setTimeout(() => {
     year.textContent = item.year;
     price.classList.add('table-price');
     price.textContent = item.price;
-    type.classList.add('table-type');
-    type.textContent = item.type;
+
+    // changes Rodvin to Rødvin
+    typeContainer.classList.add('table-type');
+    if(item.type === "Rodvin"){
+      type.textContent = "Rødvin"
+    } else {
+      type.textContent = item.type
+    }
+    type.classList.add(`type-${item.type}`)
+    
     score.classList.add('table-score');
     score.textContent = item.score;
     caret.classList.add('table-caret');
 
-    accordionTitle.append(name, year, price, type, score, caret);
+    accordionTitle.append(name, year, price, typeContainer, score, caret);
 
     // creating and appending the accordion content
 

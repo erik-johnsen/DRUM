@@ -422,6 +422,29 @@ footer {
 .table-item_accordion-undertitle {
   font-size: var(--font-size-small);
 }
+
+.type-Champagne, .type-Rodvin, .type-Hvitvin {
+  display: flex;
+  width: fit-content;
+  border: 1px solid var(--color-champagne-primary);
+  border-radius: 3.125rem;
+  background-color: var(--color-champagne-secondary);
+  color: var(--color-champagne-primary);
+  padding: 0.25rem 0.75rem;
+  font-size: 1rem;
+}
+
+.type-Rodvin {
+  border: 1px solid var(--color-redwine-primary);
+  background-color: var(--color-redwine-secondary);
+  color: var(--color-redwine-primary);
+}
+
+.type-Hvitvin {
+  border: 1px solid var(--color-whitewine-primary);
+  background-color: var(--color-whitewine-secondary);
+  color: var(--color-whitewine-primary);
+}
 /* LOGIC */
 
 .active-flex {
