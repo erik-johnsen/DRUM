@@ -1,6 +1,6 @@
 import firebaseConfig from "./firebaseConfig";
 import {initializeApp} from 'firebase/app'
-import {getFirestore, collection, deleteDoc, doc, onSnapshot, addDoc} from 'firebase/firestore'
+import {getFirestore, collection, deleteDoc, doc, onSnapshot, addDoc, Firestore} from 'firebase/firestore'
 initializeApp(firebaseConfig)
 const database = getFirestore()
 const wineCollection = collection(database, 'wineCollection')
@@ -13,6 +13,7 @@ onSnapshot(wineCollection, (snapshot)=>{
 	})
 
 })
+console.log(wineArray);
 
 // GET INPUT DATA
 
@@ -34,6 +35,11 @@ const JRscoreInput = document.querySelector(".tasting-questions_score-JR-input")
 const allScore = document.querySelectorAll(".score-input")
 
 const addWineForm = document.querySelector('.add_wine-form')
+const submitButton = document.querySelector(".tasting-questions-button_submit")
+const addAnotherWineButton = document.querySelector(".tasting-questions-button_add-wine")
+
+const landingPage = document.querySelector(".landing-page")
+const addWinePage = document.querySelector(".add_wine-page")
 
 const averageScoreContainer = document.querySelector(".tasting-questions_average-score_number")
 
@@ -77,12 +83,21 @@ addWineForm.addEventListener("submit", (e)=> {
 	.then(()=> {
 		console.log("it worked");
 		addWineForm.reset()
-		averageScoreContainer = "- - -"
+		averageScoreContainer.textContent = "- - -"
 	})
 	.catch((error)=> {
 		console.log(error.message);
 	})
+
+	window.scrollTo({top: 0, behavior: "smooth"})
 })
+
+
+submitButton.addEventListener("click", ()=> {
+	console.log("hei");
+	landingPage.classList.add("active-flex")
+	addWinePage.classList.remove("active-flex")
+})	
 
 
 

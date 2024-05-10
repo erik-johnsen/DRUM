@@ -357,7 +357,6 @@ footer {
 .table-content {
   display: flex;
   flex-direction: column;
-
 }
 
 .table-item {
@@ -408,6 +407,7 @@ footer {
 .table-item_accordion-title {
   display: flex;
   width: 100%;
+  align-items: center;
 }
 
 .table-item_accordion-content {
