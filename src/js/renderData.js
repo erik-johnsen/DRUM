@@ -29,15 +29,15 @@ setTimeout(() => {
     caret.append(caretImg);
 
     name.classList.add('table-name');
-	name.textContent = item.name
+    name.textContent = item.name;
     year.classList.add('table-year');
-	year.textContent = item.year
+    year.textContent = item.year;
     price.classList.add('table-price');
-	price.textContent = item.price
+    price.textContent = item.price;
     type.classList.add('table-type');
-	type.textContent = item.type
+    type.textContent = item.type;
     score.classList.add('table-score');
-	score.textContent = item.score
+    score.textContent = item.score;
     caret.classList.add('table-caret');
 
     accordionTitle.append(name, year, price, type, score, caret);
@@ -159,43 +159,50 @@ setTimeout(() => {
       element.classList.add('table-item_accordion-info');
     });
 
-	// Adding text to the elements
+    // Adding text to the elements
 
-	producerTitle.textContent = "PRODUCER"
-	producerInfo.textContent = item.producer
-	
-	areaTitle.textContent = "AREA"
-	areaInfo.textContent = item.area
+    producerTitle.textContent = 'PRODUCER';
+    producerInfo.textContent = item.producer;
 
-	MJscoreTitle.textContent = "MJ"
-	MJscoreInfo.textContent = item.MJ
+    areaTitle.textContent = 'AREA';
+    areaInfo.textContent = item.area;
 
-	BALscoreTitle.textContent = "BAL"
-	BALscoreInfo.textContent = item.BAL
+    MJscoreTitle.textContent = 'MJ';
+    MJscoreInfo.textContent = item.MJ;
 
-	NIBscoreTitle.textContent = "NIB"
-	NIBscoreInfo.textContent = item.NIB
+    BALscoreTitle.textContent = 'BAL';
+    BALscoreInfo.textContent = item.BAL;
 
-	countryTitle.textContent = "COUNTRY"
-	countryInfo.textContent = item.country
+    NIBscoreTitle.textContent = 'NIB';
+    NIBscoreInfo.textContent = item.NIB;
 
-	tasteDateTitle.textContent = "SMAKING"
-	tasteDateInfo.textContent = item.date
+    countryTitle.textContent = 'COUNTRY';
+    countryInfo.textContent = item.country;
 
-	HSscoreTitle.textContent = "HS"
-	HSscoreInfo.textContent = item.HS
+    tasteDateTitle.textContent = 'SMAKING';
+    tasteDateInfo.textContent = item.date;
 
-	LPWscoreTitle.textContent = "LPW"
-	LPWscoreInfo.textContent = item.LPW
+    HSscoreTitle.textContent = 'HS';
+    HSscoreInfo.textContent = item.HS;
 
-	JRscoreTitle.textContent = "JR"
-	JRscoreInfo.textContent = item.JR
-	
-	itemContainer.addEventListener("toggle", (e)=> {
-		const clickedItem = e.currentTarget
-		const secondChild = clickedItem.children[1]
-		secondChild.classList.add("active-grid")
-	})
+    LPWscoreTitle.textContent = 'LPW';
+    LPWscoreInfo.textContent = item.LPW;
+
+    JRscoreTitle.textContent = 'JR';
+    JRscoreInfo.textContent = item.JR;
+
+    // toggleing accordion
+
+    itemContainer.addEventListener('click', (e) => {
+      const clickedItem = e.currentTarget;
+      const secondChild = clickedItem.children[1];
+      if (secondChild.classList.contains('active-grid')) {
+        secondChild.classList.remove('active-grid');
+        caretImg.style.transform = "rotate(360deg)"
+      } else {
+        secondChild.classList.add('active-grid');
+        caretImg.style.transform = "rotate(180deg)"
+      }
+    });
   });
 }, 1000);
-
