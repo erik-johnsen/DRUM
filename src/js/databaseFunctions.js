@@ -1,6 +1,7 @@
 import firebaseConfig from "./firebaseConfig";
 import {initializeApp} from 'firebase/app'
 import {getFirestore, collection, deleteDoc, doc, onSnapshot, addDoc, Firestore} from 'firebase/firestore'
+import loadingRenderedData from "./renderData";
 initializeApp(firebaseConfig)
 const database = getFirestore()
 const wineCollection = collection(database, 'wineCollection')
@@ -11,9 +12,10 @@ onSnapshot(wineCollection, (snapshot)=>{
 	snapshot.docs.forEach(item => {
 		wineArray.push({id: item.id, ...item.data()})
 	})
-
+	wineArray.sort((a, b) => a.name.localeCompare(b.name))
 })
 console.log(wineArray);
+
 
 // GET INPUT DATA
 
@@ -23,6 +25,7 @@ const nameInput = document.querySelector(".tasting-questions_info-name-input")
 const typeInput = document.querySelector(".tasting-questions_info-type-input")
 const yearInput = document.querySelector(".tasting-questions_info-year-input")
 const producerInput = document.querySelector(".tasting-questions_info-producer-input")
+const areaInput = document.querySelector(".tasting-questions_info-area-input")
 const countryInput = document.querySelector(".tasting-questions_info-country-input")
 const priceInput = document.querySelector(".tasting-questions_info-price-input")
 const MJscoreInput = document.querySelector(".tasting-questions_score-MJ-input")
@@ -58,8 +61,6 @@ allScore.forEach((score, index)=> {
 		averageScore = totalScore / (index + 1)
 		averageScore = Math.round(averageScore * 10) / 10
 		averageScoreContainer.textContent = `${averageScore}p`
-		console.log(averageScore);
-		console.log(totalScore);
 	})
 
 })
@@ -72,6 +73,7 @@ const addWineToDatabase = ()=> {
 		type: typeInput.value,
 		year: Number(yearInput.value),
 		producer: producerInput.value,
+		area: areaInput.value,
 		country: countryInput.value,
 		price: Number(priceInput.value),
 		MJ: Number(MJscoreInput.value),
@@ -93,23 +95,29 @@ const addWineToDatabase = ()=> {
 	})
 
 	window.scrollTo({top: 0, behavior: "smooth"})
+
+	// resets the average score
 	totalScore = 0
 	averageScore = 0
-
+	
 }
 
 
 submitButton.addEventListener("click", (e)=> {
 	e.preventDefault()
 	addWineToDatabase()
+	loadingRenderedData()
 	landingPage.classList.add("active-flex")
 	addWinePage.classList.remove("active-flex")
+	
+	wineNumber = 1
+	addWineNumber.textContent = `Vin nr. 0${wineNumber}`
 })	
 
 addAnotherWineButton.addEventListener("click", (e)=> {
 	e.preventDefault()
 	addWineToDatabase()
-	addWineNumber.textContent = `Vin nr. ${wineNumber += 1}`
+	addWineNumber.textContent = `Vin nr. 0${wineNumber += 1}`
 })
 
 

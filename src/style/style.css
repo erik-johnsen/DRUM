@@ -404,6 +404,10 @@ footer {
   height: 0.5rem;
 }
 
+.table-sort {
+  cursor: pointer;
+}
+
 .table-item_accordion-title {
   display: flex;
   width: 100%;
