@@ -62,7 +62,7 @@ headerCategory.forEach((category) => {
 
     function sorting(attribute) {
       switch (attribute) {
-		case 'LowName':
+		    case 'LowName':
           sortedArray.sort((a, b) => a.name.localeCompare(b.name));
           break;
         case 'HighName':
