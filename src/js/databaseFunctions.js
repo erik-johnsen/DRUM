@@ -1,4 +1,4 @@
-import firebaseConfig from "./firebaseConfig";
+import firebaseConfig from "../../firebaseConfig";
 import {initializeApp} from 'firebase/app'
 import {getFirestore, collection, deleteDoc, doc, onSnapshot, addDoc, Firestore} from 'firebase/firestore'
 import loadingRenderedData from "./renderData";
