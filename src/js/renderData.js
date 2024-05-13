@@ -1,10 +1,9 @@
 import wineArray from './databaseFunctions';
 const tableContent = document.querySelector('.table-content');
 
-// SETTIMEOUT is a temp solution
 const loadingRenderedData = () => {
   
-  setTimeout(() => {
+ 
     tableContent.textContent = ""
     wineArray.forEach((item) => {
       const itemContainer = document.createElement('div');
@@ -220,10 +219,8 @@ const loadingRenderedData = () => {
         }
       });
     });
-  }, 1000);
 };
 
 
-window.addEventListener("DOMContentLoaded", loadingRenderedData)
 
 export default loadingRenderedData

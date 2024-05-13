@@ -52,6 +52,29 @@ nav {
   border-radius: 0.25rem;
 }
 
+.login-popup {
+  position: absolute;
+  right: 0;
+  bottom: -12rem;
+  display: none;
+  flex-direction: column;
+  border: 1px solid var(--color-primary);
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--color-background);
+  gap: 1rem;
+}
+
+.login-inputs_container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.login-inputs_container div {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Footer */
 
 footer {

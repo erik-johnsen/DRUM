@@ -13,8 +13,8 @@ onSnapshot(wineCollection, (snapshot)=>{
 		wineArray.push({id: item.id, ...item.data()})
 	})
 	wineArray.sort((a, b) => a.name.localeCompare(b.name))
+	loadingRenderedData()
 })
-console.log(wineArray);
 
 
 // GET INPUT DATA
