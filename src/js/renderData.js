@@ -41,12 +41,16 @@ const loadingRenderedData = () => {
 
       // changes Rodvin to Rødvin
       typeContainer.classList.add('table-type');
-      if (item.type === 'Rodvin') {
+      if (item.type === 'Rodvin' || item.type === "R") {
         type.textContent = 'Rødvin';
+        type.classList.add(`type-Rodvin`);
+      } else if(item.type === "H"){
+        type.textContent = 'Hvitvin';
+        type.classList.add(`type-Hvitvin`);
       } else {
-        type.textContent = item.type;
+        type.textContent = 'Champagne';
+        type.classList.add(`type-Champagne`);
       }
-      type.classList.add(`type-${item.type}`);
 
       score.classList.add('table-score');
       score.textContent = item.score;
