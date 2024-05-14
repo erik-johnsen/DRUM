@@ -45,7 +45,7 @@ nav {
   cursor: pointer;
 }
 
-.nav-new_form, .login-button {
+.nav-new_form {
   color: var(--color-background);
   background-color: var(--color-redwine-primary);
   padding: 0.5rem 0.75rem;
@@ -54,26 +54,39 @@ nav {
 
 .login-popup {
   position: absolute;
-  right: 0;
-  bottom: -12rem;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
   display: none;
   flex-direction: column;
   border: 1px solid var(--color-primary);
   padding: 2rem;
   border-radius: 1rem;
   background-color: var(--color-background);
-  gap: 1rem;
+  color: var(--color-primary);
+  gap: 5rem;
   align-items: center;
 }
 
+.login-title {
+  font-size: var(--font-size-under_title);
+}
 .login-inputs_container {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 23rem;
+  font-size: var(--font-size-small);
 }
 .login-inputs_container div {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login-inputs_container div input{
+  height: 2rem;
 }
 
 .popup-error {
@@ -82,7 +95,11 @@ nav {
 }
 
 .login-button {
-  width: fit-content;
+  background-color: var(--color-redwine-primary);
+  color: var(--color-background);
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-medium);
 }
 
 /* Footer */
@@ -490,4 +507,8 @@ footer {
 
 .active-grid {
   display: grid;
+}
+
+.missing-input {
+  border: 1px solid red;
 }

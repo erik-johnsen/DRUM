@@ -29,21 +29,6 @@
             <button class="nav-button nav-new_form" data-buttons="add_wine">
               Ny vinsmaking
             </button>
-            <div class="login-popup">
-              <div>Log inn for å legge til vin</div>
-              <div class="login-inputs_container">
-                <div>
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" class="login-email_input">
-                </div>
-                <div>
-                  <label for="password">Password</label>
-                  <input type="password" id="password" name="password" class="login-password_input">
-                </div>
-              </div>
-              <p class="popup-error">Feil mail eller passord</p>
-              <button class="login-button">Login</button>
-            </div>
           </div>
         </nav>
       </header>
@@ -109,7 +94,8 @@
                   <input
                     name="date"
                     type="date"
-                    class="pre-tasting-questions_date-input"
+                    class="mandatory-inputs pre-tasting-questions_date-input"
+                    required
                   />
                 </div>
                 <div>
@@ -117,8 +103,9 @@
                   <input
                     name="host"
                     type="text"
-                    class="pre-tasting-questions_host-input"
+                    class="mandatory-inputs pre-tasting-questions_host-input"
                     placeholder="Skriv her"
+                    required
                   />
                 </div>
               </div>
@@ -133,7 +120,8 @@
                       type="text"
                       name="name"
                       placeholder="Skriv her"
-                      class="tasting-questions_info-name-input"
+                      class="mandatory-inputs tasting-questions_info-name-input"
+                      required
                     />
                   </div>
                   <div class="form_2">
@@ -141,7 +129,7 @@
                       <label for="type">TYPE</label>
                       <select
                         name="type"
-                        class="tasting-questions_info-type-input"
+                        class="mandatory-inputs tasting-questions_info-type-input"
                       >
                         <option value="velg">Velg</option>
                         <option value="Rodvin">Rødvin</option>
@@ -156,7 +144,8 @@
                         name="year"
                         placeholder="----"
                         maxlength="4"
-                        class="tasting-questions_info-year-input"
+                        class="mandatory-inputs tasting-questions_info-year-input"
+                        required
                       />
                     </div>
                   </div>
@@ -167,7 +156,8 @@
                       type="text"
                       name="producer"
                       placeholder="Skriv her"
-                      class="tasting-questions_info-producer-input"
+                      class="mandatory-inputs tasting-questions_info-producer-input"
+                      required
                       />
                     </div>
                     <div>
@@ -176,7 +166,8 @@
                       type="text"
                       name="area"
                       placeholder="Skriv her"
-                      class="tasting-questions_info-area-input"
+                      class="mandatory-inputs tasting-questions_info-area-input"
+                      required
                       />
                     </div>
                   </div>
@@ -187,7 +178,8 @@
                         type="text"
                         name="country"
                         placeholder="Skriv her"
-                        class="tasting-questions_info-country-input"
+                        class="mandatory-inputs tasting-questions_info-country-input"
+                        required
                       />
                     </div>
                     <div>
@@ -196,7 +188,8 @@
                         type="number"
                         name="price"
                         placeholder="Skriv her"
-                        class="tasting-questions_info-price-input"
+                        class="mandatory-inputs tasting-questions_info-price-input"
+                        required
                       />
                     </div>
                   </div>
@@ -309,6 +302,23 @@
           </div>
         </page>
       </pages>
+
+      <div class="login-popup">
+        <div class="login-title">Logg inn</div>
+        <div class="login-inputs_container">
+          <div>
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" class="login-email_input">
+          </div>
+          <div>
+            <label for="password">PASSORD</label>
+            <input type="password" id="password" name="password" class="login-password_input">
+          </div>
+          <p class="popup-error">Feil mail eller passord</p>
+          <button class="login-button">Logg inn</button>
+        </div>
+        
+      </div>
 
       <footer>
         <div class="footer-title">DRUM vinsmaking</div>

@@ -3,8 +3,8 @@ const tableContent = document.querySelector('.table-content');
 
 const loadingRenderedData = () => {
   
- 
-    tableContent.textContent = ""
+    // FIX THIS, everytime a wine is added, this function does not remove the previous reenders so it becomes doubled
+    tableContent.innerHTML = ""
     wineArray.forEach((item) => {
       const itemContainer = document.createElement('div');
       itemContainer.classList.add('table-item');
@@ -39,7 +39,6 @@ const loadingRenderedData = () => {
       price.classList.add('table-price');
       price.textContent = item.price;
 
-      // changes Rodvin to Rødvin
       typeContainer.classList.add('table-type');
       if (item.type === 'Rodvin' || item.type === "R") {
         type.textContent = 'Rødvin';

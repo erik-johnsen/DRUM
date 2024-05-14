@@ -2,6 +2,7 @@ import firebaseConfig from "../../firebaseConfig";
 import {initializeApp} from 'firebase/app'
 import {getFirestore, collection, deleteDoc, doc, onSnapshot, addDoc, Firestore} from 'firebase/firestore'
 import loadingRenderedData from "./renderData";
+import formVali from "./FormValidation";
 initializeApp(firebaseConfig)
 const database = getFirestore()
 const wineCollection = collection(database, 'wineCollection')
@@ -105,19 +106,26 @@ const addWineToDatabase = ()=> {
 
 submitButton.addEventListener("click", (e)=> {
 	e.preventDefault()
-	addWineToDatabase()
-	loadingRenderedData()
-	landingPage.classList.add("active-flex")
-	addWinePage.classList.remove("active-flex")
+	if(formVali()) {
+		addWineToDatabase()
+		loadingRenderedData()
+		landingPage.classList.add("active-flex")
+		addWinePage.classList.remove("active-flex")
+		wineNumber = 1
+		addWineNumber.textContent = `Vin nr. 0${wineNumber}`
+	}
 	
-	wineNumber = 1
-	addWineNumber.textContent = `Vin nr. 0${wineNumber}`
+	
+	
 })	
 
 addAnotherWineButton.addEventListener("click", (e)=> {
 	e.preventDefault()
-	addWineToDatabase()
-	addWineNumber.textContent = `Vin nr. 0${wineNumber += 1}`
+	if(formVali()) {
+		addWineToDatabase()
+		addWineNumber.textContent = `Vin nr. 0${wineNumber += 1}`
+	}
+	
 })
 
 
