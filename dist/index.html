@@ -60,20 +60,18 @@
             <div class="about-content">
               <div class="about-title">Om DRUM</div>
               <p class="about-text_content">
-                Welcome to DRUM, where the passion for wine converges with the
-                expertise of six middle-aged connoisseurs. Beyond our monthly
-                tastings lies a meticulously curated digital database, capturing
-                every detail of our vinous explorations. From tasting notes to
-                vintage comparisons, our website serves as a comprehensive
-                repository of wine knowledge. Dive into our virtual cellar,
-                where each entry is meticulously cataloged with ratings, flavor
-                profiles, and regional insights. Whether you're seeking
-                recommendations or simply delving into the world of wine, DRUM
-                offers a gateway to a wealth of information and enjoyment,
-                inviting you to embark on this data-driven journey with us.
+                Vinklubben Drum er en klubb for smakning av vin. Den består ni
+                dag av seks medlemmer og klubben har eksistert i over 30 år. Det
+                er noe usikkert hva som er utspringet til navnet, men vi tror det
+                er: Drammens unge menn. 
+                Formålet med klubben er å prøvesmake vin
+                i ulike settinger, det kan være årgang/distrikt/sammenlikninger.
+                Vin som blir testet er røde/hvite/musserende og port vin.
+                Klubben har møter en gang per måned og resultater fra hvert møte
+                blir registrert i en database med poeng rangering per vin.
               </p>
               <p class="about-text_members">
-                Smakerene er Magne Johnsen, Lars-Petter og de andre
+                Smakerene er Magne Johnsen, Jan Roger Lie, Lars Petter Wahlum, Helge Stubberud og Nils Inge Brurberg. 
               </p>
             </div>
           </section>
@@ -153,21 +151,21 @@
                     <div>
                       <label for="producer">PRODUSENT</label>
                       <input
-                      type="text"
-                      name="producer"
-                      placeholder="Skriv her"
-                      class="mandatory-inputs tasting-questions_info-producer-input"
-                      required
+                        type="text"
+                        name="producer"
+                        placeholder="Skriv her"
+                        class="mandatory-inputs tasting-questions_info-producer-input"
+                        required
                       />
                     </div>
                     <div>
                       <label for="area">OMRÅDE</label>
                       <input
-                      type="text"
-                      name="area"
-                      placeholder="Skriv her"
-                      class="mandatory-inputs tasting-questions_info-area-input"
-                      required
+                        type="text"
+                        name="area"
+                        placeholder="Skriv her"
+                        class="mandatory-inputs tasting-questions_info-area-input"
+                        required
                       />
                     </div>
                   </div>
@@ -283,12 +281,22 @@
                 Avslutt vinsmakingen
               </button>
             </section>
-
           </form>
         </page>
         <page class="page database-page" data-pages="database">
           <div class="database-title">Databasen</div>
           <div class="table-container">
+            <div class="api-select">
+              <label for="exchange">Hvilken valuta vil du se prisen i?</label>
+              <select name="exchange" id="exchange">
+                <option value="NOK">NOK</option>
+                <option value="SEK">SEK</option>
+                <option value="DKK">DKK</option>
+                <option value="EURO">EURO</option>
+                
+
+              </select>
+            </div>
             <div class="table-header">
               <span class="table-sort table-name">NAVN</span>
               <span class="table-sort table-year">ÅRGANG</span>
@@ -308,16 +316,25 @@
         <div class="login-inputs_container">
           <div>
             <label for="email">EMAIL</label>
-            <input type="email" id="email" name="email" class="login-email_input">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="login-email_input"
+            />
           </div>
           <div>
             <label for="password">PASSORD</label>
-            <input type="password" id="password" name="password" class="login-password_input">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="login-password_input"
+            />
           </div>
           <p class="popup-error">Feil mail eller passord</p>
           <button class="login-button">Logg inn</button>
         </div>
-        
       </div>
 
       <footer>

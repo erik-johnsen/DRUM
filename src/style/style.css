@@ -100,8 +100,7 @@ nav {
   width: 100%;
   padding: 0.5rem 1rem;
   font-size: var(--font-size-medium);
-}
-
+} 
 /* Footer */
 
 footer {
@@ -389,12 +388,22 @@ footer {
 }
 
 .table-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   font-size: var(--font-size-small);
   color: var(--color-primary);
 }
+
+.api-select {
+  position: absolute;
+  right: 0;
+  top: -3rem;
+  display: flex;
+  flex-direction: column;
+}
+
 
 .table-header {
   display: flex;

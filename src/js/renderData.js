@@ -1,7 +1,10 @@
 import wineArray from './databaseFunctions';
 const tableContent = document.querySelector('.table-content');
 
-const loadingRenderedData = () => {
+const APIselect = document.getElementById("exchange")
+
+
+const loadingRenderedData = (currencies) => {
   
     // FIX THIS, everytime a wine is added, this function does not remove the previous reenders so it becomes doubled
     tableContent.innerHTML = ""
@@ -37,7 +40,21 @@ const loadingRenderedData = () => {
       year.classList.add('table-year');
       year.textContent = item.year;
       price.classList.add('table-price');
-      price.textContent = item.price;
+      if(currencies !== undefined) {
+        if(APIselect.value === 'SEK') {
+        price.textContent = Math.floor(currencies.SEK * item.price);
+        } else if(APIselect.value === 'DKK') {
+        price.textContent = Math.floor(currencies.DKK * item.price);
+        } else if(APIselect.value === 'EURO') {
+        price.textContent = Math.floor(currencies.EUR * item.price);
+        } else {
+        price.textContent = Math.floor(item.price);
+        }
+      } else {
+        price.textContent = item.price;
+      }
+      
+      
 
       typeContainer.classList.add('table-type');
       if (item.type === 'Rodvin' || item.type === "R") {
@@ -223,7 +240,5 @@ const loadingRenderedData = () => {
       });
     });
 };
-
-
 
 export default loadingRenderedData
