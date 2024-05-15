@@ -16,5 +16,5 @@ const getData = async () => {
 	
 }
 
-APIselect.addEventListener("change", getData)
+// APIselect.addEventListener("change", getData)
 

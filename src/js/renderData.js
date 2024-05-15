@@ -5,7 +5,6 @@ const APIselect = document.getElementById("exchange")
 
 
 const loadingRenderedData = (currencies) => {
-  
     // FIX THIS, everytime a wine is added, this function does not remove the previous reenders so it becomes doubled
     tableContent.innerHTML = ""
     wineArray.forEach((item) => {

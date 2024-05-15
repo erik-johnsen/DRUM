@@ -19,7 +19,6 @@ const priceInput = document.querySelector(
 const allMandatoryInputs = document.querySelectorAll(".mandatory-inputs")
 
 const formVali = () => {
-	console.log("test");
   if (
     !dateInput.value.trim() ||
     !hostInput.value.trim() ||
