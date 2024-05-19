@@ -17,6 +17,9 @@ const addWinePage = document.querySelector(".add_wine-page")
 const addWineNavButton = document.querySelector(".nav-new_form")
 const loginError = document.querySelector(".popup-error")
 
+const logoutButton = document.querySelector(".nav-loguot")
+const landingPage = document.querySelector(".landing-page")
+
 let isAthorized = false
 
 navButtons.forEach(navButton => {
@@ -48,6 +51,7 @@ loginButton.addEventListener("click", (e)=> {
 		isAthorized = true
 		pages.forEach(page => page.classList.remove("active-flex"))
 		addWinePage.classList.add("active-flex")
+		logoutButton.classList.add("active-block")
 		loginPopup.classList.remove("active-flex")
 
 	})
@@ -57,12 +61,26 @@ loginButton.addEventListener("click", (e)=> {
 
 })
 
-document.addEventListener('click', function(event) {
-	if (event.target !== addWineNavButton && !loginPopup.contains(event.target)) {
+logoutButton.addEventListener("click", (e)=>{
+	e.preventDefault()
+	signOut(authService)
+	.then(()=> {
+		console.log("logged out")
+		logoutButton.classList.remove("active-block")
+		landingPage.classList.add("active-flex")
+		isAthorized = false
+	})
+	.catch(error => console.log(error.message))
+})
+
+// function that lets the user click outside of the login box to remove it
+
+document.addEventListener('click', function(e) {
+	if (e.target !== addWineNavButton && !loginPopup.contains(e.target)) {
 	  loginPopup.classList.remove('active-flex')
 	  loginEmail.value = ""
 	  loginPassword.value = ""
-		loginError.classList.remove("active-flex")
+	  loginError.classList.remove("active-flex")
 
 	}
 });

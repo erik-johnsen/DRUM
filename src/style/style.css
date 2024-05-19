@@ -101,6 +101,10 @@ nav {
   padding: 0.5rem 1rem;
   font-size: var(--font-size-medium);
 } 
+
+.nav-loguot {
+  display: none;
+}
 /* Footer */
 
 footer {
@@ -516,6 +520,10 @@ footer {
 
 .active-grid {
   display: grid;
+}
+
+.active-block {
+  display: block;
 }
 
 .missing-input {
