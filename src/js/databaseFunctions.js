@@ -52,19 +52,26 @@ let wineNumber = 1
 
 
 // getting and updating the average score 
-// FIX THIS
+
+const countEmptyInputs = ()=> {
+	const scoreArray = [...allScore]
+	const numberOfInputs = scoreArray.filter(input => input.value.trim() !== '')
+	return numberOfInputs.length
+}
 
 let totalScore = 0
 let averageScore = 0
-allScore.forEach((score, index)=> {
+allScore.forEach((score)=> {
 	score.addEventListener("change", ()=> {
-		totalScore += Number(score.value) 
-		averageScore = totalScore / (index + 1)
+		const totalScore = [Number(MJscoreInput.value), Number(HSscoreInput.value), Number(BALscoreInput.value), Number(LPWscoreInput.value), Number(NIBscoreInput.value), Number(JRscoreInput.value)].reduce((sum, current) => sum + current, 0);
+		const lengthOfInputs = countEmptyInputs()
+		averageScore = totalScore / lengthOfInputs
 		averageScore = Math.round(averageScore * 10) / 10
 		averageScoreContainer.textContent = `${averageScore}p`
 	})
-
 })
+
+
 
 const addWineToDatabase = ()=> {
 	wineArray = []
