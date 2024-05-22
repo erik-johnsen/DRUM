@@ -6,7 +6,7 @@ import formVali from "./FormValidation";
 initializeApp(firebaseConfig)
 const database = getFirestore()
 const wineCollection = collection(database, 'wineCollection')
-const wineArray = []
+let wineArray = []
 // GET DATA FROM DATABASE
 onSnapshot(wineCollection, (snapshot)=>{
 	
@@ -67,6 +67,7 @@ allScore.forEach((score, index)=> {
 })
 
 const addWineToDatabase = ()=> {
+	wineArray = []
 	const newWine = {
 		date: dateInput.value,
 		host: hostInput.value,
