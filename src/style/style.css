@@ -105,6 +105,15 @@ nav {
 .nav-loguot {
   display: none;
 }
+
+@media screen and (max-width: 799px) {
+  .nav-buttons {
+    font-size: var(--font-size-small);
+  }
+  .nav-title {
+    font-size: var(--font-size-nav_medium);
+  }
+}
 /* Footer */
 
 footer {
@@ -137,18 +146,15 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-.landing-page img {
-  height: 100%;
-  width: auto;
+.landing_page-img img {
+  width : 100%;
+
 }
 
-.landing-page_left, .landing-page_right {
-  flex-basis: 50%;
-}
+.landing_page-img {
+  width: 100%;
+  display: flex;
 
-.landing-page_left {
-  margin-right: -3.5rem;
-  z-index: 1;
 }
 
 /* about page */
@@ -160,9 +166,11 @@ footer {
 }
 
 .about_section-img {
+  display: flex;
   flex-basis: 50%;
   height: 100%;
   width: 100%;
+  justify-content: center;
 }
 
 .about_section-content {
@@ -171,7 +179,6 @@ footer {
 
 .about-img {
   max-height: 100%;
-  width: 30rem;
   border-radius: 0.625rem;
 }
 
@@ -199,6 +206,37 @@ footer {
 .about-text_content,
 .about-text_members {
   font-size: var(--font-size-medium);
+}
+
+@media screen and (max-width: 1075px) {
+	.about-text_content,
+  .about-text_members {
+  font-size: var(--font-size-small);
+  }  
+  .about-title {
+    font-size: var(--font-size-medium);
+  }
+  .about-content {
+    width: 100%;
+  }
+  .about-page {
+    gap: 1rem;
+  }
+  .about-img {
+      height: 80%;
+      width: auto;
+      
+  }
+  .about_section-img {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 729px) {
+
+  .about-img {
+      height: 60%;
+  }
 }
 
 /*  add wine page*/
@@ -373,6 +411,19 @@ footer {
   color: var(--color-background);
   background-color: var(--color-redwine-primary);
   border: 1px solid var(--color-primary)
+}
+
+@media screen and (max-width: 1021px) {
+  .pre-tasting-questions {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .tasting-questions {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 }
 
 /* database page */
