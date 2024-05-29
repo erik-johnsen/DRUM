@@ -9,7 +9,7 @@ const getData = async () => {
 		const response = await fetch(`http://localhost:4000/`)
 		const data = await response.json()
 		console.log(data);
-		// APIselect.addEventListener("change", ()=>loadingRenderedData(data.conversion_rates))
+		APIselect.addEventListener("change", ()=>loadingRenderedData(data))
 		
 	} catch (error) {
 		console.log("Something went wrong!", error);

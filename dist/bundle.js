@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nconst firebaseConfig = {\n  a
   \***********************/
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _renderData_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./renderData.js */ \"./src/js/renderData.js\");\n\nconst APIselect = document.getElementById(\"exchange\");\nlet currencies;\nconst getData = async () => {\n  try {\n    const response = await fetch(`http://localhost:4000/`);\n    const data = await response.json();\n    console.log(data);\n    // APIselect.addEventListener(\"change\", ()=>loadingRenderedData(data.conversion_rates))\n  } catch (error) {\n    console.log(\"Something went wrong!\", error);\n  }\n};\nwindow.addEventListener(\"DOMContentLoaded\", getData);\n\n//# sourceURL=webpack://assignment_4_winedrum/./src/js/API.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _renderData_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./renderData.js */ \"./src/js/renderData.js\");\n\nconst APIselect = document.getElementById(\"exchange\");\nlet currencies;\nconst getData = async () => {\n  try {\n    const response = await fetch(`http://localhost:4000/`);\n    const data = await response.json();\n    console.log(data);\n    APIselect.addEventListener(\"change\", () => (0,_renderData_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(data));\n  } catch (error) {\n    console.log(\"Something went wrong!\", error);\n  }\n};\nwindow.addEventListener(\"DOMContentLoaded\", getData);\n\n//# sourceURL=webpack://assignment_4_winedrum/./src/js/API.js?");
 
 /***/ }),
 

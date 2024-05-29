@@ -18,7 +18,7 @@ app.get("/", async (req, res)=> {
 	try {
 		const response = await fetch(`https://v6.exchangerate-api.com/v6/${EXCHANGE_KEY}/latest/NOK`)
 		const data = await response.json()
-		res.json(data)
+		res.json(data.conversion_rates)
 		
 	} catch (error) {
 		console.log(error);
