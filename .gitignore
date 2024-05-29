@@ -1,4 +1,5 @@
 .DS_Store
 firebaseConfig.js
 importToFire.js
-APIkey.js
+.env
+node_modules

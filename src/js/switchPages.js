@@ -1,4 +1,4 @@
-import firebaseConfig from "../../firebaseConfig";
+import firebaseConfig from "../../firebaseConfig.js";
 import {initializeApp} from 'firebase/app'
 import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth'
 initializeApp(firebaseConfig)
@@ -26,6 +26,9 @@ navButtons.forEach(navButton => {
 	function displayPages(e){
 		const clickedButton = e.currentTarget
 		const pageToDisplay = clickedButton.dataset.buttons
+		
+		// checks if user is logged in when clicking "ny vinsmaking"
+		
 		if(pageToDisplay === "add_wine" && !isAthorized) {
 			loginPopup.classList.add("active-flex")
 		} else {

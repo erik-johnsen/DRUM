@@ -1,4 +1,4 @@
-import wineArray from './databaseFunctions';
+import wineArray from './databaseFunctions.js';
 const tableContent = document.querySelector('.table-content');
 
 const APIselect = document.getElementById("exchange")

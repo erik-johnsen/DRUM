@@ -1,5 +1,4 @@
-import EXCHANGE_KEY from "../../APIkey";
-import loadingRenderedData from "./renderData";
+import loadingRenderedData from "./renderData.js";
 
 const APIselect = document.getElementById("exchange")
 
@@ -7,10 +6,10 @@ let currencies
 
 const getData = async () => {
 	try {
-		const response = await fetch(`https://v6.exchangerate-api.com/v6/${EXCHANGE_KEY}/latest/NOK`)
+		const response = await fetch(`http://localhost:4000/`)
 		const data = await response.json()
-
-		APIselect.addEventListener("change", ()=>loadingRenderedData(data.conversion_rates))
+		console.log(data);
+		// APIselect.addEventListener("change", ()=>loadingRenderedData(data.conversion_rates))
 		
 	} catch (error) {
 		console.log("Something went wrong!", error);

@@ -1,4 +1,4 @@
-import firebaseConfig from '../../firebaseConfig';
+import firebaseConfig from '../../firebaseConfig.js';
 import { initializeApp } from 'firebase/app';
 import {
   getFirestore,
@@ -9,8 +9,9 @@ import {
   addDoc,
   Firestore,
 } from 'firebase/firestore';
-import loadingRenderedData from './renderData';
-import formVali from './FormValidation';
+
+import loadingRenderedData from './renderData.js';
+import formVali from './FormValidation.js';
 initializeApp(firebaseConfig);
 const database = getFirestore();
 const wineCollection = collection(database, 'wineCollection');

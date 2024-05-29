@@ -1,5 +1,5 @@
-import wineArray from './databaseFunctions';
-import loadingRenderedData from './renderData';
+import wineArray from './databaseFunctions.js';
+import loadingRenderedData from './renderData.js';
 
 const headerCategory = document.querySelectorAll('.table-sort');
 
