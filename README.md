@@ -17,7 +17,7 @@ Contributors:
 Favicon: 
 * Microsoft Bing Image Creator AI
 
-Landing Page Images:
+Landing Page Images and help designing:
 * Mathilda Gustafsson Johnsen 
 
 ### Related links
