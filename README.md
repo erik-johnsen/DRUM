@@ -22,5 +22,5 @@ Landing Page Images and help designing:
 
 ### Related links
 
-* Git Hub: [Github Repository](https://github.com/erik-johnsen/FetchAPI)
+* Git Hub: [Github Repository](https://github.com/erik-johnsen/DRUM)
 * Netlify: [Drum](https://comfy-kulfi-c262cf.netlify.app/)
